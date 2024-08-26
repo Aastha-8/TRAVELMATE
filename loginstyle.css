@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  font-family: Inter;
+}
+
+.Navbar {
+  display: flex;
+  align-items: center;
+  background-color: #0c0707;
+  color: white;
+  padding: 10px 20px;
+}
+
+.back-arrow {
+  color: white;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.back-arrow:hover {
+  text-decoration: underline;
+}
+
+.Navbar .left {
+  display: flex;
+  align-items: center;
+}
+
+.Navbar .logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.Navbar .travelmate {
+  color: white;
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.Navbar .right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.Navbar .language {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  color: white;
+}
+
+.Navbar .lang {
+  margin-left: 5px;
+  font-size: 1em;
+}
+
+.Navbar .help, .Navbar .about {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent button background */
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.Navbar .help:hover, .Navbar .about:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* Lighten on hover */
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust height based on navbar height */
+}
+
+.left-side,
+.right-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-side {
+  overflow: hidden;
+}
+
+.left-side .photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  padding: 20px;
+  border-left: 1px solid #ccc;
+}
+
+.right-side .first {
+  position: absolute;
+  top: 18%;
+  left: 60%;
+  color: #000;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.right-side .text {
+  position: absolute;
+  top: 25%;
+  left: 60%;
+  color: #000;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.right-side .text_email {
+    left: 60%;
+  position: absolute;
+  top: 40%;
+  font-size: 25px;
+  font-weight: 500;
+}
+.right-side .email {
+  position: absolute;
+  left: 60%;
+  display: flex;
+  top: 45%;
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  background: #cccaca;
+}
+
+.right-side .text_password {
+  position: absolute;
+  left: 60%;
+  top: 55%;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.right-side .password {
+  position: absolute;
+  left: 60%;
+  top: 60%;
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  background: #cccaca;
+}
+
+.right-side .login {
+  left: 68%;
+  position: absolute;
+  top: 70%;
+  width: 150px;
+  height: 45px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 100%;
+  background: #000000;
+}
+
+.right-side .title{
+  position: absolute;
+  height: 50px;
+  left: 69%;
+  top: 75%;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.right-side .title .click{
+  color: #000;
+}

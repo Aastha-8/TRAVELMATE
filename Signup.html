@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Signup.css">
+</head>
+<body>
+    <nav class="Navbar">
+        <a href="index.html" class="back-arrow">
+            <span>&larr;</span>
+        </a>
+        <div class="left">
+            <img src="Assets/logo.png" alt="logo" class="logo">
+            <h1 class="travelmate">TRAVELMATE</h1>
+        </div>
+        <div class="right">
+            <div class="language">
+                <i class="fa-solid fa-globe" style="color: #ffffff;"></i>
+                <h1 class="lang">EN</h1>
+            </div>
+            <button class="help">Help</button>
+            <button class="about">About</button>
+        </div>
+    </nav>
+    <div class="main-container">
+        <div class="left-side">
+            <img src="Assets/mountains.jpg" alt="Photo" class="photo">
+        </div>
+        <div class="right-side">
+            <p class="text">SignUp</p>
+            <p class="first">Welcome to TravelMate!</p>
+            <form action="/submit-form" method="POST" onsubmit="return validateForm()">
+                <label for="name" class="text_name">Name:</label>
+                <input type="text" id="name" name="name" class="name" required>
+                <label for="email" class="text_email">Email:</label>
+                <input type="email" id="email" name="email" class="email" required>
+                <label for="password" class="text_password">Password:</label>
+                <input type="password" id="password" name="password" class="password" required>
+                <label for="contact" class="text_contact">Contact Number:</label>
+                <input type="tel" id="contact" name="contact" class="contact" required>
+                <div id="contactError"></div>
+                <button type="submit" class="SignUp">SignUp</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validateForm() {
+            var contact = document.getElementById('contact').value;
+            var contactError = document.getElementById('contactError');
+            // Clear any previous error message
+            contactError.textContent = '';
+            // Check if the contact number is exactly 10 digits long
+            if (contact.length !== 10 || isNaN(contact)) {
+                contactError.textContent = 'Contact number must be exactly 10 digits.';
+                return false; // Prevent form submission
+            }
+            return true; // Allow form submission
+        }
+    </script>
+</body>
+</html>

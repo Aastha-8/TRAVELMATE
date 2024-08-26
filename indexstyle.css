@@ -1,0 +1,242 @@
+/* Ensure html and body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Inter;
+    overflow: auto; /* Enable scrolling */
+}
+
+/* Styling the header and navigation bar */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    z-index: 2; /* Ensure it stays above the video */
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .left {
+    display: flex;
+    align-items: center;
+}
+
+.header .logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header .travelmate {
+    color: white;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.header .right {
+    display: flex;
+    align-items: center;
+}
+
+.header .language {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    color: white;
+}
+
+.header .lang {
+    margin-left: 5px;
+    font-size: 1em;
+}
+
+.header .help, .header .about {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent button background */
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header .help:hover, .header .about:hover {
+    background-color: rgba(10, 1, 1, 0.4); /* Lighten on hover */
+}
+
+/* Styling the main container */
+.body {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Use viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    padding-top: 80px; /* Offset for the fixed header */
+    overflow: hidden;
+}
+
+/* Positioning the video */
+.body video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1; /* Place video behind other content */
+    object-fit: cover; /* Ensures video covers the entire viewport */
+}
+
+/* Additional styling for content elements */
+.body h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+.body h3 {
+    margin-bottom: 1em;
+}
+
+.body .login, .body .Signup, .body .google {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.body .login:hover, .body .Signup:hover, .body .google:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
+}
+
+.body .google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body .google img {
+    width: 24px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.body .googlecontent {
+    display: inline-block;
+}
+
+.body h4 {
+    margin: 20px 0;
+}
+
+/* Styling for the content section */
+.content {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    z-index: 2; /* Ensure content appears above the video */
+}
+
+.content h3, .content h1, .content p {
+    margin-bottom: 20px;
+}
+.content p{
+    font-size: 20px;
+}
+.content h1{
+    font-size: 45px;
+}
+
+.content .route, .content .adventure, .content .cuisine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.photos{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.content .route img,
+.content .adventure img,
+.content .cuisine img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.content .route h2,
+.content .adventure h2,
+.content .cuisine h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.content .route p,
+.content .adventure p,
+.content .cuisine p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.content .About img{
+    width: 1120px;
+    height: 398px;
+    top: 2165px;
+}
+
+.Home_End{
+    font-family: inter;
+}
+.Home_End h1{
+font-size: 35px;
+font-weight: 700;
+line-height: 42.36px;
+text-align: center  ;
+}
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.contact-info .left, .contact-info .right {
+    width: 45%; 
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 20px;
+    margin: 10px 0 5px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin: 0 0 15px;
+}
+
+/* Styling for images in a row */
+.route, .adventure, .cuisine {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Add space between images */
+}
